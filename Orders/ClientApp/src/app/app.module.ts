@@ -20,7 +20,7 @@ import { PlatformLocation, APP_BASE_HREF } from "@angular/common";
     ReactiveFormsModule,
     AppMaterialModule,
     RouterModule.forRoot([
-      { path: "", component: HomeComponent, pathMatch: "full" },
+      { path: "orders/:id", component: HomeComponent },
       { path: "**", redirectTo: "/" }
     ])
   ],

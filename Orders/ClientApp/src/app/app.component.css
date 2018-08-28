@@ -1,6 +1,21 @@
-@media (max-width: 767px) {
-  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-  .body-content {
-    padding-top: 50px;
-  }
+.app-container {
+  position: absolute;
+  top: 60px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+}
+
+.app-sidenav {
+  display: flex;
+  width: 300px;
+  background-color: #fafafa;
+}
+
+.app-content {
+  padding: 0 20px 20px 20px;
+}
+
+.selected-order {
+  font-weight: bold;
 }

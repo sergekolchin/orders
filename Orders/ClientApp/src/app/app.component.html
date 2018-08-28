@@ -1,1 +1,24 @@
-<router-outlet></router-outlet>
+<h1>Orders</h1>
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #sidenav mode="side" opened class="app-sidenav">
+    <mat-list>
+      <mat-list-item *ngFor="let order of orders">
+        <a matline href="" [routerLink]="['/orders', order.id]" routerLinkActive="selected-order">
+          <span class="order-status" [ngClass]="(order.status === 1) ? 'complete' : 'inProgress'"></span>Order {{order.number}} {{order.date | date:"dd.MM.yyyy HH:MM"}}
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list dense>
+        <mat-list-item>
+          <span class="order-status complete"></span>Complete
+        </mat-list-item>
+        <mat-list-item>
+          <span class="order-status inProgress"></span>In progress
+        </mat-list-item>
+      </mat-list>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="app-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

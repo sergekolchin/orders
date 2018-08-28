@@ -1,12 +1,10 @@
 import { OrderLine } from "./orderLine";
 
-export class Order {
-  constructor(
-    public id: number,
-    public number: string,
-    public date: Date,
-    public orderStatus: string,
-    public total: number,
-    public lines: OrderLine[]
-    ) { }
+export interface Order {
+    id: number;
+    number: string;
+    date: Date;
+    status: string;
+    total: number;
+    lines: OrderLine[];
 }

@@ -42,16 +42,17 @@ namespace Orders.Controllers
                 .Select(x => new OrderViewModel
                 {
                     Id = x.Id,
+                    Number = x.Number,
                     Date = x.Date,
-                    Status = x.Status.ToString(),
-                    Total = x.Lines.Sum(y => y.Product.Price * y.Quantity),
+                    Status = x.Status == OrderStatus.InProgress ? "In progress" : x.Status.ToString(),
+                    Total = x.Lines.Sum(y => y.Price * y.Quantity),
                     Lines = x.Lines.Select(z => new OrderLineViewModel
                     {
                         Id = z.Id,
                         Name = z.Product.Name,
-                        Price = z.Product.Price,
+                        Price = z.Price,
                         Quantity = z.Quantity,
-                        Total = z.Quantity * z.Product.Price
+                        Total = z.Quantity * z.Price
                     })
                 })
                 .FirstOrDefaultAsync(x => x.Id == id);

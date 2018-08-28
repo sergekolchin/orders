@@ -1,9 +1,7 @@
-export class OrderLine {
-  constructor(
-    public id: number,
-    public name: string,
-    public price: number,
-    public quantity: number,
-    public total: number
-  ) { }
+export interface OrderLine {
+    id: number;
+    name: string;
+    price: number;
+    quantity: number;
+    total: number;
 }

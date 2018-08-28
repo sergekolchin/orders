@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule, MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatIconModule,
   MatTableModule, MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatGridListModule, MatDialogModule, MatNativeDateModule, MatListModule,
-  MatTooltipModule, MAT_DATE_LOCALE, MAT_DATE_FORMATS, DateAdapter
+  MatTooltipModule, MatSidenavModule, MatCardModule, MAT_DATE_LOCALE, MAT_DATE_FORMATS, DateAdapter
 } from "@angular/material";
 import { MomentUtcDateAdapter } from "../adapters/momentUtcDate.adapter";
 import { MAT_MOMENT_DATE_FORMATS } from "@angular/material-moment-adapter";
@@ -13,7 +13,7 @@ import { MAT_MOMENT_DATE_FORMATS } from "@angular/material-moment-adapter";
     CommonModule, BrowserAnimationsModule,
     MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule, MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatIconModule,
     MatTableModule, MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatGridListModule, MatDialogModule, MatNativeDateModule, MatListModule,
-    MatTooltipModule
+    MatTooltipModule, MatSidenavModule, MatCardModule
   ],
   declarations: [],
   providers: [
@@ -24,7 +24,7 @@ import { MAT_MOMENT_DATE_FORMATS } from "@angular/material-moment-adapter";
     BrowserAnimationsModule,
     MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule, MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatIconModule,
     MatTableModule, MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatGridListModule, MatDialogModule, MatNativeDateModule, MatListModule,
-    MatTooltipModule
+    MatTooltipModule, MatSidenavModule, MatCardModule
     ]
 })
 export class AppMaterialModule { }
